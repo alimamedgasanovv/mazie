@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Icon } from "@/components/ui/icon";
+import { Button } from "@/components/primitives/button";
+import { Input } from "@/components/primitives/input";
+import { Icon } from "@/components/primitives/icon";
 import { CheckboxShowcase } from "./checkbox-showcase";
 
 export default async function Home() {

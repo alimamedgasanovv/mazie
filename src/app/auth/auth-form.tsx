@@ -1,9 +1,9 @@
 'use client'
 
 import { useState, ReactNode } from 'react'
-import { Input } from '@/components/ui/input'
-import { Checkbox } from '@/components/ui/checkbox'
-import { Button } from '@/components/ui/button'
+import { Input } from '@/components/primitives/input'
+import { Checkbox } from '@/components/primitives/checkbox'
+import { Button } from '@/components/primitives/button'
 import styles from './auth.module.css'
 
 interface AuthFormProps {

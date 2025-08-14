@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from "react";
-import { Checkbox } from "@/components/ui/checkbox";
+import { Checkbox } from "@/components/primitives/checkbox";
 
 export function CheckboxShowcase() {
   const [checkboxStates, setCheckboxStates] = useState({

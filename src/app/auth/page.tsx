@@ -1,9 +1,9 @@
 import styles from './auth.module.css'
-import { Icon } from '@/components/ui/icon'
-import { FeatureBadge } from '@/components/ui/feature-badge'
-import { Button } from '@/components/ui/button'
-import { LabeledDivider } from '@/components/ui/labeled-divider'
-import { Input } from '@/components/ui/input'
+import { Icon } from '@/components/primitives/icon'
+import { FeatureBadge } from '@/components/primitives/feature-badge'
+import { Button } from '@/components/primitives/button'
+import { LabeledDivider } from '@/components/primitives/labeled-divider'
+import { Input } from '@/components/primitives/input'
 import { AuthForm } from './auth-form'
 
 export default async function AuthPage() {
