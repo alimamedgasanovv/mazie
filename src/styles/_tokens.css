@@ -1,0 +1,158 @@
+:root {
+  --bg-primary: var(--gray-00);
+  --bg-secondary: var(--gray-50);
+
+  --surface-default: var(--gray-00);
+  --surface-hover: var(--gray-75);
+  --surface-hover-lg: var(--gray-50);
+  --surface-pressed: var(--gray-100);
+  --surface-focused: var(--gray-75);
+  --surface-disabled: var(--gray-100);
+
+  --surface-accent-default: var(--blue-600);
+  --surface-accent-hover: var(--blue-800);
+  --surface-accent-pressed: var(--blue-400);
+  --surface-accent-disabled: var(--gray-100);
+
+  --border-light: var(--gray-100);
+  --border-medium: var(--gray-200);
+  --border-high: var(--gray-300);
+  --border-focused: var(--gray-950);
+  --border-error: var(--rose-500);
+  --border-action: var(--gray-150);
+
+  --text-primary: var(--gray-950);
+  --text-secondary: var(--gray-500);
+  --text-muted: var(--gray-400);
+  --text-light: var(--gray-200);
+  --text-success: var(--green-600);
+  --text-danger: var(--rose-600);
+  --text-brand: var(--blue-600);
+  --text-cyan: var(--cyan-600);
+  --text-violet: var(--violet-600);
+
+  --input-bg-default: var(--gray-50);
+  --input-bg-hover: var(--gray-75);
+  --input-bg-focused: var(--gray-50);
+  --input-border-default: transparent;
+  --input-border-hover: transparent;
+  --input-border-focused: var(--gray-950);
+  --input-border-disabled: var(--gray-150);
+
+  --button-primary-bg-default: var(--gray-950);
+  --button-primary-bg-hover: var(--gray-900);
+  --button-primary-bg-pressed: var(--gray-800);
+  --button-primary-bg-disabled: var(--gray-50);
+  --button-primary-text-primary: var(--gray-00);
+  --button-primary-text-disabled: var(--gray-300);
+  --button-primary-border-default: transparent;
+  --button-primary-border-hover: transparent;
+  --button-primary-border-pressed: transparent;
+  --button-primary-border-disabled: var(--gray-100);
+  
+  --button-secondary-bg-default: var(--gray-00);
+  --button-secondary-bg-hover: var(--gray-50);
+  --button-secondary-bg-pressed: var(--gray-100);
+  --button-secondary-bg-disabled: var(--gray-50);
+  --button-secondary-text-primary: var(--gray-950);
+  --button-secondary-text-disabled: var(--gray-300);
+  --button-secondary-border-default: var(--gray-150);
+  --button-secondary-border-hover: var(--gray-200);
+  --button-secondary-border-pressed: var(--gray-150);
+  --button-secondary-border-disabled: var(--gray-100);
+
+  /* Icon size tokens */
+  --icon-xs: 0.75rem;    /* 12px */
+  --icon-sm: 14px;
+  --icon-md: 1.25rem;    /* 20px - default */
+  --icon-lg: 1.5rem;     /* 24px */
+  --icon-xl: 2rem;       /* 32px */
+  --icon-2xl: 3rem;      /* 48px */
+
+  /* Font family tokens */
+  --font-family-base: 'Inter', system-ui, sans-serif;
+
+  /* Font weight tokens */
+  --font-weight-light: 350;
+  --font-weight-normal: 400;
+
+  /* Font size tokens */
+  --font-size-xs: 12px;
+  --font-size-sm: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 24px;
+
+  /* Letter spacing tokens */
+  --letter-spacing-tight: -0.4px;
+  --letter-spacing-normal: -0.2px;
+
+  /* Border width token */
+  --border-width: 0.5px;
+
+  /* Border radius tokens */
+  --rounded-none: 0px;
+  --rounded-xs: 2px;
+  --rounded-sm: 4px;
+  --rounded-5: 5px;
+  --rounded: 6px;
+  --rounded-md: 8px;
+  --rounded-lg: 10px;
+  --rounded-xl: 12px;
+  --rounded-2xl: 14px;
+  --rounded-3xl: 16px;
+  --rounded-4xl: 20px;
+  --rounded-5xl: 24px;
+  --rounded-6xl: 28px;
+  --rounded-7xl: 32px;
+  --rounded-full: 9999px;
+
+  /* Spacing tokens */
+  --spacing-0: 0px;
+  --spacing-px: 1px;
+  --spacing-0-5: 2px;
+  --spacing-1: 4px;
+  --spacing-1-5: 6px;
+  --spacing-2: 8px;
+  --spacing-2-5: 10px;
+  --spacing-3: 12px;
+  --spacing-3-5: 14px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+  --spacing-9: 36px;
+  --spacing-10: 40px;
+  --spacing-11: 44px;
+  --spacing-12: 48px;
+  --spacing-14: 56px;
+  --spacing-16: 64px;
+  --spacing-20: 80px;
+  --spacing-24: 96px;
+  --spacing-28: 112px;
+  --spacing-32: 128px;
+  --spacing-36: 144px;
+  --spacing-40: 160px;
+  --spacing-44: 176px;
+  --spacing-48: 192px;
+  --spacing-52: 208px;
+  --spacing-56: 224px;
+  --spacing-60: 240px;
+  --spacing-64: 256px;
+  --spacing-72: 288px;
+  --spacing-80: 320px;
+  --spacing-96: 384px;
+
+  /* Transition tokens */
+  --transition-fast: 0.2s;
+  --transition-normal: 0.3s;
+  --transition-slow: 0.5s;
+
+  /* Component height tokens */
+  --height-input: 34px;
+  --height-button: 34px;
+
+  /* Max width tokens */
+  --max-width-form: 400px;
+}

@@ -1,0 +1,78 @@
+/* Primitive Color Palette */
+:root {
+  --gray-00: #FFFFFF;
+  --gray-25: #FAFAFA;
+  --gray-50: #F6F6F6;
+  --gray-75: #F0F0F0;
+  --gray-100: #E7E7E7;
+  --gray-150: #E0E0E0;
+  --gray-200: #D1D1D1;
+  --gray-300: #B0B0B0;
+  --gray-400: #888888;
+  --gray-500: #6D6D6D;
+  --gray-600: #5D5D5D;
+  --gray-700: #4F4F4F;
+  --gray-800: #454545;
+  --gray-900: #3D3D3D;
+  --gray-950: #000000;
+
+  --blue-50: #EFF6FF;
+  --blue-100: #DBEAFE;
+  --blue-200: #BFDBFE;
+  --blue-300: #93C5FD;
+  --blue-400: #60A5FA;
+  --blue-500: #3B82F6;
+  --blue-600: #2563EB;
+  --blue-700: #1D4ED8;
+  --blue-800: #1E40AF;
+  --blue-900: #1E3A8A;
+  --blue-950: #172554;
+
+  --rose-50: #FFF1F2;
+  --rose-100: #FFE4E6;
+  --rose-200: #FECDD3;
+  --rose-300: #FDA4AF;
+  --rose-400: #FB7185;
+  --rose-500: #F43F5E;
+  --rose-600: #E11D48;
+  --rose-700: #BE123C;
+  --rose-800: #9F1239;
+  --rose-900: #881337;
+  --rose-950: #4C0519;
+
+  --green-50: #ECFDF5;
+  --green-100: #D1FAEC;
+  --green-200: #A7F3DA;
+  --green-300: #6EE7BF;
+  --green-400: #34D39E;
+  --green-500: #10B981;
+  --green-600: #059666;
+  --green-700: #047852;
+  --green-800: #065F42;
+  --green-900: #064E36;
+  --green-950: #022C1E;
+
+  --cyan-50: #ECFEFF;
+  --cyan-100: #CFFAFE;
+  --cyan-200: #A5F3FC;
+  --cyan-300: #67E8F9;
+  --cyan-400: #22D3EE;
+  --cyan-500: #06B6D4;
+  --cyan-600: #0891B2;
+  --cyan-700: #0E7490;
+  --cyan-800: #155E75;
+  --cyan-900: #164E63;
+  --cyan-950: #083344;
+
+  --violet-50: #F5F3FF;
+  --violet-100: #EDE9FE;
+  --violet-200: #DDD6FE;
+  --violet-300: #C4B5FD;
+  --violet-400: #A78BFA;
+  --violet-500: #8B5CF6;
+  --violet-600: #7C3AED;
+  --violet-700: #6D28D9;
+  --violet-800: #5B21B6;
+  --violet-900: #4C1D95;
+  --violet-950: #2E1065;
+}

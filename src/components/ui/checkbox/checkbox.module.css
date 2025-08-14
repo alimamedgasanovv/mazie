@@ -1,0 +1,97 @@
+.container {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  cursor: pointer;
+}
+
+.container:has(.hiddenInput:disabled) {
+  cursor: not-allowed;
+}
+
+.checkboxWrapper {
+  position: relative;
+  width: var(--spacing-3-5);
+  height: var(--spacing-3-5);
+}
+
+.hiddenInput {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  cursor: inherit;
+}
+
+.hiddenInput:disabled {
+  cursor: not-allowed;
+}
+
+.customCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--spacing-3-5);
+  height: var(--spacing-3-5);
+  border-radius: var(--rounded-5);
+  transition: all var(--transition-fast) ease;
+  pointer-events: none;
+  border: var(--spacing-0-5) solid var(--border-medium);
+  background-color: transparent;
+}
+
+.container:hover .customCheckbox {
+  border-color: var(--border-high);
+}
+
+.container:has(.hiddenInput:checked) .customCheckbox {
+  border: none;
+  background-color: var(--surface-accent-default);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.81624 4.37897C9.15911 3.94638 9.78768 3.87326 10.2205 4.21588C10.6532 4.55875 10.7263 5.18826 10.3836 5.62116L6.58382 10.421C6.40114 10.6515 6.12585 10.7904 5.83187 10.7999C5.53767 10.8092 5.25348 10.6875 5.05648 10.4688L3.25667 8.46881C2.88731 8.05835 2.92053 7.42616 3.33089 7.0567C3.74135 6.68733 4.37354 6.72058 4.743 7.13092L5.75081 8.25006L8.81624 4.37897Z' fill='white'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--icon-sm);
+}
+
+.container:hover:has(.hiddenInput:checked) .customCheckbox {
+  background-color: var(--surface-accent-hover);
+}
+
+.container:has(.hiddenInput[data-indeterminate]) .customCheckbox {
+  border: none;
+  background-color: var(--gray-500);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7H11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: var(--icon-sm) var(--icon-sm);
+}
+
+.container:hover:has(.hiddenInput[data-indeterminate]) .customCheckbox {
+  background-color: var(--gray-700);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M3 7H11' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+}
+
+.container:has(.hiddenInput:disabled) .customCheckbox {
+  border: none;
+  background-color: var(--surface-disabled);
+}
+
+.container:hover:has(.hiddenInput:disabled) .customCheckbox {
+  background-color: var(--surface-disabled);
+}
+
+
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-primary);
+}
+
+.container:has(.hiddenInput:disabled) .label {
+  color: var(--text-muted);
+}

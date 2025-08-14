@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  width: 100%;
+}
+
+.label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-normal);
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal);
+  color: var(--text-muted);
+  white-space: nowrap;
+}

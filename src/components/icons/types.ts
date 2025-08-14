@@ -1,0 +1,1 @@
+export type IconName = 'bolt-filled' | 'chart-bar-trend-up' | 'check' | 'clock-filled' | 'envelope' | 'google' | 'link' | 'lock-filled' | 'minus';

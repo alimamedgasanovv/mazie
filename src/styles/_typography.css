@@ -1,0 +1,101 @@
+/* Custom typography styles */
+.text-h1 {
+  font-family: var(--font-family-base);
+  font-size: 24px;
+  font-weight: var(--font-weight-normal); /* 400 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight); /* -0.4px */
+}
+
+.subheading-large-medium {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: var(--font-weight-normal); /* 400 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight); /* -0.4px */
+}
+
+.subheading-large-regular {
+  font-family: var(--font-family-base);
+  font-size: 18px;
+  font-weight: var(--font-weight-light); /* 350 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight); /* -0.4px */
+}
+
+.subheading-medium-medium {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: var(--font-weight-normal); /* 400 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight); /* -0.4px */
+}
+
+.subheading-medium-regular {
+  font-family: var(--font-family-base);
+  font-size: 16px;
+  font-weight: var(--font-weight-light); /* 350 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-tight); /* -0.4px */
+}
+
+.subheading-small-medium {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: var(--font-weight-normal); /* 400 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal); /* -0.2px */
+}
+
+.subheading-small-regular {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: var(--font-weight-light); /* 350 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal); /* -0.2px */
+}
+
+.subheading-xsmall-medium {
+  font-family: var(--font-family-base);
+  font-size: 12px;
+  font-weight: var(--font-weight-normal); /* 400 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal); /* -0.2px */
+}
+
+.subheading-xsmall-regular {
+  font-family: var(--font-family-base);
+  font-size: 12px;
+  font-weight: var(--font-weight-light); /* 350 weight */
+  line-height: 1;
+  letter-spacing: var(--letter-spacing-normal); /* -0.2px */
+}
+
+.body-small {
+  font-family: var(--font-family-base);
+  font-size: 14px;
+  font-weight: var(--font-weight-light); /* 350 weight */
+  line-height: 24px;
+  letter-spacing: var(--letter-spacing-normal); /* -0.2px */
+}
+
+/* Color utility classes */
+.text-color-primary {
+  color: var(--text-primary);
+}
+
+.text-color-secondary {
+  color: var(--text-secondary);
+}
+
+.text-color-muted {
+  color: var(--text-muted);
+}
+
+.text-color-cyan {
+  color: var(--text-cyan);
+}
+
+.text-color-violet {
+  color: var(--text-violet);
+}
