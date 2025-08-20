@@ -1,0 +1,35 @@
+@import '../../../styles/_typography.css';
+
+.container {
+  display: flex;
+  background-color: var(--bg-secondary);
+  border-radius: var(--rounded-full);
+  padding: var(--spacing-0-5);
+  gap: 0;
+}
+
+.tab {
+  composes: subheading-small-medium;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-2-5) var(--spacing-3-5);
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast) ease;
+  white-space: nowrap;
+}
+
+.tab.active {
+  background-color: var(--bg-primary);
+  border-radius: var(--rounded-full);
+  color: var(--text-primary);
+}
+
+.tab:disabled {
+  cursor: not-allowed;
+  color: var(--text-muted);
+}

@@ -5,15 +5,27 @@
   align-items: center;
   justify-content: center;
   padding: var(--spacing-6);
+  position: relative;
 }
 
-.content {
+.floatingToggle {
+  position: absolute;
+  top: var(--spacing-6);
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+}
+
+.contentWithToggle {
   width: 100%;
   max-width: var(--max-width-form);
   display: flex;
   flex-direction: column;
   gap: var(--spacing-8);
+  padding-top: calc(var(--height-segmented-control) + var(--spacing-6) + var(--spacing-4));
 }
+
+
 
 .heroContainer {
   display: flex;
@@ -65,4 +77,10 @@
   flex-direction: column;
   gap: var(--spacing-6);
   width: 100%;
+}
+
+.passwordSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
 }

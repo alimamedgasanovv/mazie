@@ -90,6 +90,13 @@
   /* Border width token */
   --border-width: 0.5px;
 
+  /* Line height tokens */
+  --line-height-none: 1;
+
+  /* Outline widths */
+  --outline-width-sm: 1.5px;
+  --outline-width-base: 2px;
+
   /* Border radius tokens */
   --rounded-none: 0px;
   --rounded-xs: 2px;
@@ -152,6 +159,7 @@
   /* Component height tokens */
   --height-input: 34px;
   --height-button: 34px;
+  --height-segmented-control: 42px;
 
   /* Max width tokens */
   --max-width-form: 400px;

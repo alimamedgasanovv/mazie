@@ -12,7 +12,7 @@
   font-family: var(--font-family-base);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-normal);
-  line-height: 1;
+  line-height: var(--line-height-none);
   letter-spacing: var(--letter-spacing-normal);
 }
 
@@ -21,8 +21,8 @@
 }
 
 .button:focus-visible {
-  outline: 2px solid var(--blue-500);
-  outline-offset: 2px;
+  outline: var(--outline-width-base) solid var(--border-focused);
+  outline-offset: var(--outline-width-sm);
 }
 
 .primary {

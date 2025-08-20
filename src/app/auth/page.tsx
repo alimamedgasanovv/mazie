@@ -4,51 +4,69 @@ import { FeatureBadge } from '@/components/primitives/feature-badge'
 import { Button } from '@/components/primitives/button'
 import { LabeledDivider } from '@/components/primitives/labeled-divider'
 import { Input } from '@/components/primitives/input'
+import { AuthSectionClient } from './auth-section'
 import { AuthForm } from './auth-form'
 
-export default async function AuthPage() {
-  const mascotIcon = await Icon({ name: 'mazie-mascot' })
-  const googleIcon = await Icon({ name: 'google' })
-  const envelopeIcon = await Icon({ name: 'envelope' })
-  const lockIcon = await Icon({ name: 'lock-filled' })
-  
+async function getIcon(name: string) {
+  return Icon({ name })
+}
+
+async function getBadges() {
   const badgeData = [
-    { icon: 'link', text: 'Connects to your tools', iconColor: 'brand' as const },
-    { icon: 'bolt-filled', text: 'Automates workflows', iconColor: 'violet' as const },
-    { icon: 'chart-bar-trend-up', text: 'Delivers insights', iconColor: 'success' as const },
-    { icon: 'clock-filled', text: 'Learns overtime', iconColor: 'danger' as const }
+    { iconName: 'link', text: 'Connects to your tools', iconColor: 'brand' as const },
+    { iconName: 'bolt-filled', text: 'Automates workflows', iconColor: 'violet' as const },
+    { iconName: 'chart-bar-trend-up', text: 'Delivers insights', iconColor: 'success' as const },
+    { iconName: 'clock-filled', text: 'Learns overtime', iconColor: 'danger' as const }
   ]
 
-  const badges = await Promise.all(
+  return Promise.all(
     badgeData.map(async (badge) => {
-      const icon = await Icon({ name: badge.icon })
+      const icon = await getIcon(badge.iconName)
       return { ...badge, iconComponent: icon }
     })
   )
+}
+
+export default async function AuthPage() {
+  const [
+    mascotIcon,
+    googleIcon,
+    envelopeIcon,
+    lockIcon,
+    errorIcon,
+    eyeIcon,
+    eyeSlashIcon,
+    checkIcon,
+    crossIcon,
+    badges
+  ] = await Promise.all([
+    getIcon('mazie-mascot'),
+    getIcon('google'),
+    getIcon('envelope'),
+    getIcon('lock-filled'),
+    getIcon('warning'),
+    getIcon('eye'),
+    getIcon('eye-slash'),
+    getIcon('check-circle'),
+    getIcon('xmark-circle'),
+    getBadges()
+  ])
 
   return (
     <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.heroContainer}>
-          {mascotIcon}
-          <div className={styles.textContainer}>
-            <p className={styles.title}>Mazie – Focus is worth protecting.</p>
-            <p className={styles.subtitle}>One place to connect tools, automate</p>
-            <p className={styles.subtitle}>execution, and surface insights.</p>
-          </div>
-          <div className={styles.badgesContainer}>
-            {badges.map((badge, index) => (
-              <FeatureBadge key={index} iconLeft={badge.iconComponent} iconColor={badge.iconColor}>
-                {badge.text}
-              </FeatureBadge>
-            ))}
-          </div>
-        </div>
-        <Button variant="secondary" iconLeft={googleIcon} fullWidth>
-          Continue with Google
-        </Button>
-        <LabeledDivider label="or" />
-        <AuthForm envelopeIcon={envelopeIcon} lockIcon={lockIcon} />
+      <div className={styles.contentWithToggle}>
+        <AuthSectionClient 
+          mascotIcon={mascotIcon}
+          badges={badges}
+          googleIcon={googleIcon}
+          envelopeIcon={envelopeIcon} 
+          lockIcon={lockIcon} 
+          errorIcon={errorIcon}
+          eyeIcon={eyeIcon}
+          eyeSlashIcon={eyeSlashIcon}
+          checkIcon={checkIcon}
+          crossIcon={crossIcon}
+        />
       </div>
     </div>
   )

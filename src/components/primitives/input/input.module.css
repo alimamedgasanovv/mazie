@@ -1,18 +1,28 @@
+@import '../../../styles/_typography.css';
+
 .container {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-2-5);
+  gap: var(--spacing-3);
+}
+
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-2);
 }
 
 .typography {
   font-family: var(--font-family-base);
   font-size: var(--font-size-sm);
   font-weight: var(--font-weight-normal);
-  line-height: 1;
+  line-height: var(--line-height-none);
   letter-spacing: var(--letter-spacing-normal);
 }
 
 .label {
+  composes: typography;
   color: var(--text-primary);
 }
 
@@ -49,6 +59,7 @@
 }
 
 .input {
+  composes: typography;
   flex: 1;
   border: none;
   outline: none;
@@ -58,7 +69,7 @@
 
 .input::placeholder {
   color: var(--text-muted);
-  padding: 0 var(--spacing-0-5);
+  padding: var(--spacing-0) var(--spacing-0-5);
 }
 
 .input:disabled {
@@ -72,4 +83,45 @@
   width: var(--icon-sm);
   height: var(--icon-sm);
   color: var(--text-muted);
+}
+
+/* Error states */
+.inputWrapper[data-error="true"] {
+  border-color: var(--border-error);
+  animation: shake 0.4s ease-in-out;
+}
+
+.inputWrapper[data-error="true"]:hover {
+  border-color: var(--border-error);
+}
+
+.inputWrapper[data-error="true"]:focus-within {
+  border-color: var(--border-error);
+}
+
+.errorMessage {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1-5);
+}
+
+.errorIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--icon-sm);
+  height: var(--icon-sm);
+  color: var(--text-danger);
+  flex-shrink: 0;
+}
+
+.errorText {
+  composes: subheading-small-medium;
+  color: var(--text-danger);
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  75% { transform: translateX(2px); }
 }

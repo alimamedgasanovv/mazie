@@ -9,10 +9,15 @@ interface InputProps {
   placeholder?: string
   value?: string
   onChange?: (name: string, value: string) => void
+  onBlur?: () => void
+  onFocus?: () => void
   iconLeft?: ReactNode
   iconRight?: ReactNode
   disabled?: boolean
   type?: 'text' | 'email' | 'password' | 'tel' | 'url'
+  error?: string
+  errorIcon?: ReactNode
+  autoFocus?: boolean
 }
 
 export function Input({ 
@@ -21,10 +26,15 @@ export function Input({
   placeholder,
   value,
   onChange,
+  onBlur,
+  onFocus,
   iconLeft,
   iconRight,
   disabled = false,
-  type = 'text'
+  type = 'text',
+  error,
+  errorIcon,
+  autoFocus = false
 }: InputProps) {
   const generatedId = useId()
   const inputId = name ? `input-${name}` : generatedId
@@ -32,11 +42,19 @@ export function Input({
   return (
     <div className={styles.container}>
       {label && (
-        <label htmlFor={inputId} className={`${styles.typography} ${styles.label}`}>
-          {label}
-        </label>
+        <div className={styles.headerRow}>
+          <label htmlFor={inputId} className={styles.label}>
+            {label}
+          </label>
+          {error && (
+            <div className={styles.errorMessage}>
+              {errorIcon && <span className={styles.errorIcon}>{errorIcon}</span>}
+              <span className={styles.errorText}>{error}</span>
+            </div>
+          )}
+        </div>
       )}
-      <div className={styles.inputWrapper}>
+      <div className={styles.inputWrapper} data-error={!!error}>
         {iconLeft && <span className={styles.iconWrapper}>{iconLeft}</span>}
         <input
           id={inputId}
@@ -45,8 +63,11 @@ export function Input({
           placeholder={placeholder}
           value={value}
           onChange={(e) => onChange?.(name, e.target.value)}
+          onBlur={onBlur}
+          onFocus={onFocus}
           disabled={disabled}
-          className={`${styles.typography} ${styles.input}`}
+          autoFocus={autoFocus}
+          className={styles.input}
         />
         {iconRight && <span className={styles.iconWrapper}>{iconRight}</span>}
       </div>
